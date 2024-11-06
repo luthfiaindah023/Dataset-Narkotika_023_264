@@ -29,6 +29,8 @@ Untuk memulai menggunakan dataset ini, berikut adalah contoh kode dalam Python. 
 Pastikan Anda memiliki pustaka berikut:
 ```bash
 pip install pandas matplotlib
+```
+```bash
 import pandas as pd
 
 # Memuat file Excel
