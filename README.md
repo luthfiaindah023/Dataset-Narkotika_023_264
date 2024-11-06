@@ -1,53 +1,48 @@
-# Dataset-Narkotika_023_264
+# 📜 Dataset Putusan Pengadilan - Mahkamah Agung RI
 
-# 🏛️ Dataset Putusan Pengadilan: Narkotika dan Psikotropika - Pengadilan Negeri Jakarta Utara (2024)
-Dataset ini mengumpulkan 50 putusan dari Pengadilan Negeri Jakarta Utara pada tahun 2024 dalam kategori Narkotika dan Psikotropika. Data ini berasal dari Direktori Putusan Mahkamah Agung RI, yang merupakan sumber resmi untuk akses publik putusan pengadilan di Indonesia. Dataset ini dirancang untuk mendukung analisis hukum, pemrosesan bahasa alami, dan studi terkait hukum pidana khusus.
+**Kategori**: Dataset Kasus Narkotika & Psikotropika  
+**Periode**: Tahun 2024  
+**Lembaga**: Pengadilan Negeri Jakarta Utara  
+**Jumlah Data**: 50 Putusan
 
-🌐 Tentang Dataset
-Dataset ini berfokus pada kasus PIDANA KHUSUS - Narkotika dan Psikotropika, dengan fitur-fitur berikut:
+## 🎯 Deskripsi
+Dataset ini berisi data putusan pengadilan untuk kasus **Pidana Khusus** dengan klasifikasi **Narkotika dan Psikotropika** yang diambil dari website **Direktori Putusan Mahkamah Agung Republik Indonesia**. Dataset ini fokus pada putusan yang dikeluarkan oleh Pengadilan Negeri Jakarta Utara pada tahun 2024.
 
-No Putusan: Nomor unik setiap putusan pengadilan.
-Lembaga Peradilan: Nama lembaga yang memutuskan perkara; di sini adalah Pengadilan Negeri Jakarta Utara.
-Barang Bukti: Jenis dan rincian barang bukti yang disita dalam setiap kasus.
-Amar Putusan: Ringkasan keputusan atau hukuman yang dijatuhkan, seperti penjara, rehabilitasi, atau denda.
-Catatan: Dataset ini hanya contoh untuk tujuan edukasi dan penelitian.
+### 💼 Latar Belakang
+Narkotika dan psikotropika masih menjadi salah satu permasalahan hukum terbesar di Indonesia. Dataset ini diharapkan dapat membantu akademisi, peneliti, dan praktisi hukum untuk memahami pola putusan pengadilan dalam kasus-kasus narkotika, sekaligus memberikan wawasan bagi pengembangan sistem hukum dan penegakan hukum yang lebih baik.
 
-🔍 Sekilas Data
-No Putusan	Lembaga Peradilan	Barang Bukti	Amar Putusan
-1245/Pid.Sus/2024/PN	Pengadilan Negeri Jakarta Utara	12 gram sabu, alat hisap	Penjara 7 tahun, denda Rp2.000.000
-1267/Pid.Sus/2024/PN	Pengadilan Negeri Jakarta Utara	20 butir ekstasi	Rehabilitasi, pengawasan ketat
-Data ini mendukung eksplorasi lebih lanjut terkait pola putusan, tingkat hukuman, dan pengaruh barang bukti terhadap keputusan pengadilan.
+## 📊 Struktur Dataset
+Dataset ini terdiri dari 50 entri dengan 4 fitur utama sebagai berikut:
 
-🛠️ Panduan Pengolahan Data
-Persiapan Data: Dataset disiapkan dalam format Excel dan memerlukan beberapa tahap preprocessing.
-Preprocessing Teks: Pengolahan teks termasuk normalisasi dan penghilangan karakter khusus, serta lemmatization untuk analisis lebih lanjut.
-Indexing: Data diindeks menggunakan teknik TF-IDF agar siap untuk pencarian dan analisis kata kunci dalam dokumen hukum.
-Contoh Kode untuk Preprocessing dan Indexing:
+| Kolom          | Deskripsi                                                                                      |
+|----------------|------------------------------------------------------------------------------------------------|
+| **No Putusan** | Nomor putusan yang unik untuk setiap kasus, contoh: *123/Pid.Sus/2024/PN JKT.UTR*             |
+| **Lembaga Peradilan** | Nama lembaga yang mengeluarkan putusan, yaitu *Pengadilan Negeri Jakarta Utara*           |
+| **Barang Bukti** | Deskripsi singkat mengenai barang bukti yang ditemukan, contoh: *25 gram sabu*                |
+| **Amar Putusan** | Keputusan akhir atau sanksi yang diberikan oleh pengadilan, contoh: *Pidana Penjara 5 Tahun* |
 
-python
-Copy code
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
+## 🎯 Tujuan
+Dataset ini disediakan dengan tujuan:
 
-# Membaca dataset
-df = pd.read_excel('dataset.xlsx')
-df['processed_text'] = preprocess_text(df['putusan_text'])
+1. **Penelitian**: Menganalisis pola putusan dan hukuman yang diberikan pada kasus narkotika.
+2. **Pengembangan Sistem Hukum**: Mendukung pengembangan sistem peradilan yang lebih baik dalam menangani kasus narkotika.
+3. **Pembelajaran Hukum**: Sebagai bahan pembelajaran bagi mahasiswa hukum, peneliti, dan pengamat hukum.
 
-# Penerapan TF-IDF untuk indexing
-tfidf_vectorizer = TfidfVectorizer()
-tfidf_matrix = tfidf_vectorizer.fit_transform(df['processed_text'])
-📈 Aplikasi dan Potensi Penggunaan
-Dataset ini memiliki berbagai potensi aplikasi, antara lain:
+## 💡 Ide Penggunaan Dataset
+Dataset ini bisa digunakan dalam berbagai proyek dan penelitian, seperti:
 
-Analisis Pola Putusan: Memahami keputusan hakim berdasarkan jenis barang bukti atau faktor lainnya.
-Pengembangan Model NLP Hukum: Melatih model pemrosesan bahasa alami untuk mengenali pola putusan dan prediksi hasil kasus.
-Pembelajaran Hukum Pidana: Bahan latihan untuk mahasiswa dan peneliti hukum pidana di bidang pendidikan.
-📂 Struktur Proyek
-bash
-Copy code
-📂 dataset
-├── dataset.xlsx              # Data utama dalam format Excel
-├── preprocessing_indexing.py # Skrip Python untuk preprocessing dan indexing
-└── README.md                 # Dokumentasi dataset
-⚖️ Lisensi
-Dataset ini disediakan hanya untuk tujuan edukasi dan penelitian. Penggunaan komersial atau publikasi data ini harus mendapat izin dari Direktori Putusan Mahkamah Agung RI.
+- **Analisis Sentimen Putusan**: Mengidentifikasi bagaimana barang bukti memengaruhi keputusan akhir pengadilan.
+- **Studi Kasus Perbandingan**: Membandingkan putusan dari satu lembaga peradilan dengan yang lain.
+- **Pembuatan Model Prediksi Hukuman**: Menggunakan machine learning untuk memprediksi jenis putusan berdasarkan barang bukti.
+- **Analisis Teks**: Meneliti teks amar putusan untuk mengidentifikasi pola bahasa hukum.
+
+## 📂 Format Data
+Dataset ini disimpan dalam format **.xlsx** untuk memudahkan integrasi dengan berbagai aplikasi analitik dan machine learning.
+
+## ⚠️ Catatan
+Dataset ini disediakan untuk kepentingan penelitian dan pembelajaran. Harap digunakan secara bijak dan tidak digunakan untuk keperluan yang melanggar privasi atau hukum yang berlaku.
+
+## 📜 Lisensi
+Dataset ini diperuntukkan khusus untuk **kepentingan pendidikan dan penelitian**. Anda diizinkan untuk menggunakan, menyalin, dan membagikan dataset ini untuk tujuan non-komersial, asalkan sumber data, yaitu **Direktori Putusan Mahkamah Agung RI**, disebutkan secara jelas dalam penggunaan atau publikasi apa pun.
+
+Terima kasih telah menggunakan dataset ini untuk mendukung kemajuan dalam bidang pendidikan dan penelitian hukum! 📑✨
