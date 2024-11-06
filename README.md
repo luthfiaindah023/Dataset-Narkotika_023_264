@@ -21,6 +21,23 @@ Dataset ini terdiri dari 50 entri dengan 4 fitur utama sebagai berikut:
 | **Barang Bukti** | Deskripsi singkat mengenai barang bukti yang ditemukan, contoh: *25 gram sabu*                |
 | **Amar Putusan** | Keputusan akhir atau sanksi yang diberikan oleh pengadilan, contoh: *Pidana Penjara 5 Tahun* |
 
+## 🖥️ Contoh Penggunaan Dataset
+
+Untuk memulai menggunakan dataset ini, berikut adalah contoh kode dalam Python. Kode ini memuat dataset, menampilkan informasi dasar, dan melakukan visualisasi sederhana. Pastikan Anda telah menginstal pustaka **pandas** dan **matplotlib** untuk menjalankan kode ini.
+
+### 1. Instalasi Pustaka yang Dibutuhkan
+Pastikan Anda memiliki pustaka berikut:
+```bash
+pip install pandas matplotlib
+import pandas as pd
+
+# Memuat file Excel
+data = pd.read_excel('/path/to/Overview.xlsx')  # Ganti '/path/to/Overview.xlsx' dengan lokasi file Anda
+
+# Menampilkan isi dataset
+print(data.head())  # Menampilkan 5 baris pertama dari dataset
+```
+
 ## 🎯 Tujuan
 Dataset ini disediakan dengan tujuan:
 
